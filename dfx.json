@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "backend": {
+      "type": "custom",
+      "build": "cd src/backend && npm run build",
+      "root": "src/backend",
+      "ts": "index.ts",
+      "candid": "index.did",
+      "wasm": ".azle/backend/backend.wasm.gz"
+    },
+    "frontend": {
+      "dependencies": ["backend"],
+      "type": "assets",
+      "source": ["src/frontend/dist/"],
+      "build": "npm run build:frontend"
+    }
+  },
+  "output_env_file": ".env",
+  "version": 2,
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8080",
+      "type": "ephemeral"
+    }
+  }
+}

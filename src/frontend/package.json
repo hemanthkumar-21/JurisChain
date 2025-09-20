@@ -1,0 +1,29 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --port 3000",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@dfinity/agent": "^0.19.3",
+    "@dfinity/candid": "^0.19.3",
+    "@dfinity/principal": "^0.19.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.1",
+    "typescript": "^5.1.6",
+    "vite": "^4.3.9",
+    "vitest": "^3.2.4",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "sass": "^1.63.6",
+    "dotenv": "^16.3.1",
+    "vite-plugin-environment": "^1.1.3"
+  }
+}

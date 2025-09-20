@@ -1,0 +1,27 @@
+{
+  "name": "vite-react-azle",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "src/backend",
+    "src/frontend"
+  ],
+  "scripts": {
+    "setup": "npm install && dfx start --clean --background && dfx canister create backend && dfx generate backend && dfx deploy",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "build:frontend": "npm run build --workspace=frontend",
+    "build:backend": "npm run build --workspace=backend",
+    "deploy:backend": "dfx deploy backend",
+    "deploy:frontend": "npm run build:frontend && dfx deploy frontend",
+    "deploy": "npm run build:frontend && dfx deploy",
+    "start": "dfx start --clean --background",
+    "stop": "dfx stop",
+    "test:backend": "npm run test --workspace=backend",
+    "test:frontend": "npm run test --workspace=frontend",
+    "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\" ",
+    "clean": "dfx stop && rm -rf .dfx"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
+}
