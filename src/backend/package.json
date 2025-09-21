@@ -1,18 +1,8 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "private": true,
   "scripts": {
-    "build": "npx azle backend",
-    "test": "AZLE_REBUILD=true ts-node -P tsconfig.node.json --transpile-only --ignore=false tests/test.ts",
-    "pretest": "AZLE_REBUILD=true ts-node -P tsconfig.node.json --transpile-only --ignore=false tests/pretest.ts"
+    "build": "dfx deploy"
   },
   "dependencies": {
-    "azle": "^0.17.1",
-    "ts-node": "10.7.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.1.6",
-    "rimraf": "^5.0.1"
+    "azle": "^0.33.0"
   }
 }

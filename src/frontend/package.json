@@ -1,29 +1,33 @@
 {
   "name": "frontend",
-  "version": "1.0.0",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "vite --port 3000",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "vitest run"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "@dfinity/agent": "^0.19.3",
     "@dfinity/candid": "^0.19.3",
     "@dfinity/principal": "^0.19.3"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.0.1",
-    "typescript": "^5.1.6",
-    "vite": "^4.3.9",
-    "vitest": "^3.2.4",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "sass": "^1.63.6",
+    "@eslint/js": "^9.25.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.30.1",
     "dotenv": "^16.3.1",
-    "vite-plugin-environment": "^1.1.3"
+    "vite": "^6.3.5"
   }
 }

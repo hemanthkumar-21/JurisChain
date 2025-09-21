@@ -1,18 +1,14 @@
 {
   "canisters": {
     "backend": {
-      "type": "custom",
-      "build": "cd src/backend && npm run build",
-      "root": "src/backend",
-      "ts": "src/backend/index.ts",
-      "candid": "src/backend/index.did",
-      "wasm": "src/backend/.azle/backend/backend.wasm.gz"
+      "type": "azle",
+      "main":"./src/backend/src/index.ts"
     },
     "frontend": {
       "dependencies": ["backend"],
       "type": "assets",
       "source": ["src/frontend/dist/"],
-      "build": "npm run build:frontend"
+      "workspace":"src/frontend"
     }
   },
   "output_env_file": ".env",

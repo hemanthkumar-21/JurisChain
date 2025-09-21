@@ -1,14 +1,8 @@
 {
   "canisters": {
     "backend": {
-      "type": "custom",
-      "build": "npx azle backend",
-      "root": ".",
-      "ts": "./index.ts",
-      "candid": "./index.did",
-      "wasm": "./.azle/backend/backend.wasm.gz"
+      "type": "azle",
+      "main": "./src/index.ts"
     }
-  },
-  "output_env_file": ".env",
-  "version": 2
+  }
 }

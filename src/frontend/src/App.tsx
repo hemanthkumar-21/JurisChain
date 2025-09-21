@@ -1,17 +1,14 @@
 import { useEffect, useState } from 'react';
-import '../App.css';
-import azleLogo from '../assets/azle_logo.svg';
-import azleShadow from '../assets/azle_shadow.png';
-import reactLogo from '../assets/react.svg';
-import viteLogo from '../assets/vite.svg';
-import { backend } from '../../declarations/backend';
-
+import './App.css';
+import reactLogo from './assets/react.svg';
+import {backend,canisterId,createActor,idlFactory} from "../../declarations/backend"
 function App() {
   const [count, setCount] = useState<number | undefined>();
   const [loading, setLoading] = useState(false);
 
   const fetchCount = async () => {
     try {
+      console.log('Fetching count from backend...', backend, canisterId, idlFactory, createActor);
       setLoading(true);
       const result = await backend.get();
       setCount(Number(result));
@@ -26,7 +23,8 @@ function App() {
     if (loading) return; // Cancel if waiting for a new count
     try {
       setLoading(true);
-      await backend.inc(); // Increment the count by 1
+      console.log('Incrementing count on backend...', JSON.stringify(backend));
+      await backend?.inc(); // Increment the count by 1
       await fetchCount(); // Fetch the new count
     } catch (err) {
       console.error('Increment failed:', err);
@@ -43,9 +41,6 @@ function App() {
   return (
     <div className="App">
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo vite" alt="Vite logo" />
-        </a>
         <a href="https://reactjs.org" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
@@ -54,12 +49,7 @@ function App() {
           target="_blank"
         >
           <span className="logo-stack">
-            <img
-              src={azleShadow}
-              className="logo azle-shadow"
-              alt="azle logo"
-            />
-            <img src={azleLogo} className="logo azle" alt="Azle logo" />
+            qwert
           </span>
         </a>
       </div>
