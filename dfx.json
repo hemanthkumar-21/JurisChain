@@ -4,9 +4,9 @@
       "type": "custom",
       "build": "cd src/backend && npm run build",
       "root": "src/backend",
-      "ts": "index.ts",
-      "candid": "index.did",
-      "wasm": ".azle/backend/backend.wasm.gz"
+      "ts": "src/backend/index.ts",
+      "candid": "src/backend/index.did",
+      "wasm": "src/backend/.azle/backend/backend.wasm.gz"
     },
     "frontend": {
       "dependencies": ["backend"],

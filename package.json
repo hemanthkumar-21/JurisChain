@@ -7,7 +7,7 @@
     "src/frontend"
   ],
   "scripts": {
-    "setup": "npm install && dfx start --clean --background && dfx canister create backend && dfx generate backend && dfx deploy",
+    "setup": "npm install && dfx stop && dfx start --clean --background && dfx canister create backend && dfx generate backend && dfx deploy",
     "dev:frontend": "npm run dev --workspace=frontend",
     "build:frontend": "npm run build --workspace=frontend",
     "build:backend": "npm run build --workspace=backend",

@@ -4,9 +4,9 @@
       "type": "custom",
       "build": "npx azle backend",
       "root": ".",
-      "ts": "index.ts",
-      "candid": "index.did",
-      "wasm": ".azle/backend/backend.wasm.gz"
+      "ts": "./index.ts",
+      "candid": "./index.did",
+      "wasm": "./.azle/backend/backend.wasm.gz"
     }
   },
   "output_env_file": ".env",

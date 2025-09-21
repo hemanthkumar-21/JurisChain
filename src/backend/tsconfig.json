@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2020",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "allowJs": false,
+    "outDir": "dist" 
+  },
+  "include": [
+    "index.ts", 
+    "./**/*.ts" 
+  ],
+  "exclude": [
+    "node_modules",
+    "tests",
+    ".azle"
+  ]
+}
